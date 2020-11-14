@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'eclipse'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+group = 'nl.thedutchmc'
+version = '0.1-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:29.0-jre'
+    compile group: 'org.json', name: 'json', version: '20200518'
+}
+
+application {
+    mainClassName = 'nl.thedutchmc.alertbot_watch.App'
+}
