@@ -26,6 +26,7 @@ public class Config {
 			
 			fw.write("{\r\n"
 					+ "    \"name\": \"This would be the name, e.g CDN-1 or Proxy-1\",\r\n"
+					+ "    \"port\": 5555\r\n"
 					+ "}");
 
 			fw.close();
@@ -36,6 +37,6 @@ public class Config {
 		JSONObject configFileJson = new JSONObject(content);
 		
 		App.name = configFileJson.getString("name");
+		App.port = configFileJson.getInt("port");
 	}
-	
 }

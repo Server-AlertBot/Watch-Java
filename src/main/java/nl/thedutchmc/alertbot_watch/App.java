@@ -9,15 +9,9 @@ public class App {
 	ServerSocket serverSock = null;
 	
 	public static String name;
+	public static int port;
 	
-	public static void main(String[] args) {
-		int port = 0;
-		if(args.length == 0) {
-			port = 5555;
-		} else {
-			Integer.valueOf(args[0]);
-		}
-		
+	public static void main(String[] args) {		
 		//Load the configuration file
 		try {
 			new Config().load();
@@ -29,7 +23,6 @@ public class App {
 		
 		System.out.println("Server started");
 		
-
 		new App().run(port);
 	}
 	
